@@ -87,7 +87,7 @@ from pybrain.tools.xml.networkreader import NetworkReader
 ds = SupervisedDataSet(2, 1)
 left = 0
 right = 0
-loops = 5 #This determines how high the set goes e.x. loop of 10 goes from 0,0 to 9,9
+loops = 10 #This determines how high the set goes e.x. loop of 10 goes from 0,0 to 9,9
 while left < loops:
   ds.addSample((left,right),(left+right))
   right+=1
