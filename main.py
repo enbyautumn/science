@@ -79,6 +79,7 @@ else:
 
 		      
 # AI - WIP
+import simplejson as json
 import math
 from pybrain.tools.shortcuts import buildNetwork
 from pybrain.datasets import SupervisedDataSet
@@ -88,10 +89,9 @@ ds = SupervisedDataSet(2, 1)
 
 
 data = open("/Users/mac/data.json", "r").read()
-for x in data: 
-	print(x)
-	print(x["main"])
-	#ds.addSample((data[x]["main"]["humidity"], data[x]["main"]["humidity"]), (data[x + 1]["main"]["temp"]))
+data = json.loads(data)
+for x in len(data): 
+	ds.addSample((data[x]["main"]["humidity"], data[x]["main"]["humidity"]), (data[x + 1]["main"]["temp"]))
 	
 
 print("set finished building")
