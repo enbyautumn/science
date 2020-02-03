@@ -77,12 +77,7 @@ else:
 # get historical data - WIP
 
 
-
-
-
-
-
-
+		      
 # AI - WIP
 import math
 from pybrain.tools.shortcuts import buildNetwork
@@ -90,15 +85,13 @@ from pybrain.datasets import SupervisedDataSet
 from pybrain.tools.xml.networkwriter import NetworkWriter
 from pybrain.tools.xml.networkreader import NetworkReader
 ds = SupervisedDataSet(2, 1)
-left = 0
-right = 0
-loops = 10 #This determines how high the set goes e.x. loop of 10 goes from 0,0 to 9,9
-while left < loops:
-  ds.addSample((left,right),(left+right))
-  right+=1
-  if right >= loops:
-    right = 0
-    left+=1
+
+
+data = open("/home/mac/data.json", "r").read()
+foreach x in len(data): 
+	ds.addsample((data[x]["main"]["humidity"], data[x]["main"]["humidity"]), (data[x + 1]["main"]["temp"]))
+	
+
 print("set finished building")
 from pybrain.supervised.trainers import BackpropTrainer
 net = buildNetwork(2, 5, 1)
