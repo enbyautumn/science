@@ -87,7 +87,7 @@ from pybrain.tools.xml.networkreader import NetworkReader
 ds = SupervisedDataSet(2, 1)
 
 
-data = open("/home/mac/data.json", "r").read()
+data = open("/Users/mac/data.json", "r").read()
 for x in len(data): 
 	ds.addsample((data[x]["main"]["humidity"], data[x]["main"]["humidity"]), (data[x + 1]["main"]["temp"]))
 	
