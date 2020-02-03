@@ -90,8 +90,8 @@ ds = SupervisedDataSet(2, 1)
 
 data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
-for x in range(len(data)):
-	ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x]["main"]["temp"]))
+for x in data:
+	ds.addSample((x["main"]["humidity"],x["main"]["humidity"]),(x["main"]["temp"]))
 
 
 
