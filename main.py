@@ -94,7 +94,7 @@ len = len(data)
 
 for x in range(len):
 	#ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
-	print(x)
+	print(x+1)
 
 
 
