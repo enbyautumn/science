@@ -93,8 +93,8 @@ data = json.loads(data)
 len = len(data)
 
 for x in range(len):
-	#ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
-	print(data[x+1]["main"]["temp"])
+	ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
+	#print(data[x+1]["main"]["temp"])
 
 print("set finished building")
 from pybrain.supervised.trainers import BackpropTrainer
