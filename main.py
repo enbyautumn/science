@@ -94,9 +94,8 @@ len = len(data)
 
 for x in range(len):
 	try:
-		 ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
+		ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
 	#print(data[x+1]["main"]["temp"])
-
 print("set finished building")
 from pybrain.supervised.trainers import BackpropTrainer
 net = buildNetwork(2, 5, 1)
