@@ -90,9 +90,10 @@ ds = SupervisedDataSet(2, 1)
 
 data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
-for x in range(len(data)): 
-	ds.addSample((data[x]["main"]["humidity"], data[x]["main"]["humidity"]), (data[x + 1]["main"]["temp"]))
-	
+for x in range(len(data)):
+	ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
+
+
 
 print("set finished building")
 from pybrain.supervised.trainers import BackpropTrainer
