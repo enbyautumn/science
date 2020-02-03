@@ -92,8 +92,9 @@ data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
 len = len(data)
 
+try:
 for x in range(len):
-	try: ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
+	ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
 	#print(data[x+1]["main"]["temp"])
 
 print("set finished building")
