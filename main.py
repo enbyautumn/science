@@ -100,9 +100,9 @@ for x in range(len):
 #print(data[x+1]["main"]["temp"])
 print("set finished building")
 from pybrain.supervised.trainers import BackpropTrainer
-net = buildNetwork(2, 5, 1)
+net = buildNetwork(2, 3, 1)
 trainer = BackpropTrainer(net, ds, verbose=False)
-trainer.trainUntilConvergence(maxEpochs=10000)
+trainer.trainUntilConvergence(maxEpochs=1000)
 NetworkWriter.writeToFile(net, 'weights.xml')
 print(round(net.activate([1,1])))
 print(round(net.activate([3,2])))
