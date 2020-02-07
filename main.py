@@ -103,7 +103,7 @@ from pybrain.supervised.trainers import BackpropTrainer
 net = buildNetwork(2, 3, 1)
 trainer = BackpropTrainer(net, ds, verbose=False)
 trainer.trainUntilConvergence(maxEpochs=1000)
-NetworkWriter.writeToFile(net, 'weights.xml')
+NetworkWriter.writeToFile(net, '/Users/mac/weights.xml')
 print(round(net.activate([1,1])))
 print(round(net.activate([3,2])))
 print(round(net.activate([3,3])))
