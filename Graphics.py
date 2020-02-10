@@ -38,3 +38,19 @@ ax.grid(True)
 plt.show()
 
 # n controls the number of poits on the graph, the x,y controls the x and y coordinates, to simply plot a point, ax.scatter (x, y)
+
+
+
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, ax = plt.subplots()
+ax.scatter(3, 6)
+
+ax.legend()
+
+ax.grid(True)
+plt.show()
+
+#This is the minimal code needed to plot a point on a graph (although ax.legend is included, there is actually nothing put into it)
