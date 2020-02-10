@@ -91,7 +91,7 @@ len = len(data)
 
 for x in range(len):
 	try:
-		ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["humidity"]),(data[x+1]["main"]["temp"]))
+		ds.addSample((data[x]["main"]["humidity"],data[x]["main"]["pressure"]),(data[x+1]["main"]["temp"]))
 	except:
 		print("nu")
 #print(data[x+1]["main"]["temp"])
