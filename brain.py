@@ -8,5 +8,5 @@ import math
 import requests, json 
 
 
-net = NetworkReader.readFrom('.xml') 
+net = NetworkReader.readFrom('/Users/mac/weights.xml') 
 
