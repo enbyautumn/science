@@ -74,10 +74,7 @@ if x["cod"] != "404":
 
 else: 
 	print(" City Not Found ") 
-# get historical data - WIP
 
-
-		      
 # AI - WIP
 import simplejson as json
 import math
