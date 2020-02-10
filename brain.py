@@ -9,4 +9,7 @@ import requests, json
 
 
 net = NetworkReader.readFrom('/Users/mac/weights.xml') 
+data = open("/Users/mac/data.json", "r").read()
+data = json.loads(data)
+
 
