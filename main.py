@@ -112,7 +112,6 @@ print(round(net.activate([4,1])))
 print(round(net.activate([1,2])))
 print(round(net.activate([4,4])))
 
-
 done = time.time()
 elapsed = done - start
 print(elapsed)
