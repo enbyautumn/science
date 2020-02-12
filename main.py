@@ -96,6 +96,10 @@ for x in range(len):
 		print("nu")
 #print(data[x+1]["main"]["temp"])
 print("set finished building")
+
+import time
+start = time.time()
+
 from pybrain.supervised.trainers import BackpropTrainer
 net = buildNetwork(2, 3, 5, 3, 1)
 trainer = BackpropTrainer(net, ds, verbose=False)
@@ -107,3 +111,13 @@ print(round(net.activate([3,3])))
 print(round(net.activate([4,1])))
 print(round(net.activate([1,2])))
 print(round(net.activate([4,4])))
+
+
+done = time.time()
+elapsed = done - start
+print(elapsed)
+
+f = open("/Users/mac/times.txt", "a")
+f.write(elapsed)
+f.close()
+
