@@ -10,8 +10,9 @@ data = json.loads(data)
 x = random.randrange(0, 1000)
 print("expected: " + str(data[x+1]["main"]["temp"]))
 
-ax.scatter("temp", )
-ax.grid(True)
+
+ax.scatter(x, ["temp"])
+
 
 ax.set_xlabel('Days', fontsize=15)
 ax.set_ylabel('Temperature', fontsize=15)
