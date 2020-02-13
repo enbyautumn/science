@@ -8,16 +8,14 @@ data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
 
 x = random.randrange(0, 1000)
-print("expected: " + str(data[x+1]["main"]["temp"]))
 
-
-ax.scatter(data(x, ["temp"]))
-ax.scatter(data(x+1, ["temp"]))
-ax.scatter(data(x+2, ["temp']))
-ax.scatter(data(x+3, ["temp']))
-ax.scatter(data(x+4, ["temp"]))                
-ax.scatter(data(x+5, ["temp"]))
-ax.scatter(data(x+6, ["temp"]))
+ax.scatter(data(x, ["main"]["temp"]))
+ax.scatter(data(x+1, ["main"]["temp"]))
+ax.scatter(data(x+2, ["main"]["temp']))
+ax.scatter(data(x+3, ["main"]["temp']))
+ax.scatter(data(x+4, ["main"]["temp"]))                
+ax.scatter(data(x+5, ["main"]["temp"]))
+ax.scatter(data(x+6, ["main"]["temp"]))
                  
 ax.set_xlabel('Days', fontsize=15)
 ax.set_ylabel('Temperature', fontsize=15)
