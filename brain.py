@@ -18,3 +18,5 @@ data = json.loads(data)
 x = random.randrange(0, 1000)
 print("expected: " + str(data[x+1]["main"]["temp"]))
 print(net.activate([data[x]["main"]["humidity"],data[x]["main"]["pressure"]]))
+
+
