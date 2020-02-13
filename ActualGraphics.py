@@ -9,20 +9,33 @@ data = json.loads(data)
 
 x = random.randrange(0, 1000)
 
-ax.scatter(data(x, ["main"]["temp"]))
-ax.scatter(data(x+1, ["main"]["temp"]))
-ax.scatter(data(x+2, ["main"]["temp']))
-ax.scatter(data(x+3, ["main"]["temp']))
-ax.scatter(data(x+4, ["main"]["temp"]))                
-ax.scatter(data(x+5, ["main"]["temp"]))
-ax.scatter(data(x+6, ["main"]["temp"]))
-                 
-ax.set_xlabel('Days', fontsize=15)
-ax.set_ylabel('Temperature', fontsize=15)
-ax.set_title('Temperature Chart in Degrees Farenhite')
+print("Temperature graph = 1")
+number = input ("Enter a number: ")
+number = int(number)
 
-fig, ax = plt.subplots()
-ax.grid(True)
-plt.show()
+while true:
+  if number = 1:
+    ax.scatter(data(x, ["main"]["temp"]))
+    ax.scatter(data(x+1, ["main"]["temp"]))
+    ax.scatter(data(x+2, ["main"]["temp']))
+    ax.scatter(data(x+3, ["main"]["temp']))
+    ax.scatter(data(x+4, ["main"]["temp"]))                
+    ax.scatter(data(x+5, ["main"]["temp"]))
+    ax.scatter(data(x+6, ["main"]["temp"]))
+                 
+    ax.set_xlabel('Days', fontsize=15)
+    ax.set_ylabel('Temperature', fontsize=15)
+    ax.set_title('Temperature Chart in Degrees Farenhite')
+
+    fig, ax = plt.subplots()
+    ax.grid(True)
+    plt.show()
+                              
+  else:
+    print("Sorry, I din't get that. Please re-enter your number")
+    print("Temperature graph = 1")                       
+    number = input ("Enter a number: ")
+    number = int(number)                      
+
 
 
