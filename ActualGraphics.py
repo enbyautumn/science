@@ -18,7 +18,7 @@ volume = (15 * data.volume[:-2] / data.volume[0])**2
 close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
 while true:
-  if number = 1:
+  if number == 1:
     ax.scatter(data(x, ["main"]["temp"]))
     ax.scatter(data(x+1, ["main"]["temp"]))
     ax.scatter(data(x+2, ["main"]["temp']))
