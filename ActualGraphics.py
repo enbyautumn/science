@@ -21,8 +21,8 @@ while true:
   if number == 1:
     ax.scatter(data(x, ["main"]["temp"]))
     ax.scatter(data(x+1, ["main"]["temp"]))
-    ax.scatter(data(x+2, ["main"]["temp']))
-    ax.scatter(data(x+3, ["main"]["temp']))
+    ax.scatter(data(x+2, ["main"]["temp"]))
+    ax.scatter(data(x+3, ["main"]["temp"]))
     ax.scatter(data(x+4, ["main"]["temp"]))                
     ax.scatter(data(x+5, ["main"]["temp"]))
     ax.scatter(data(x+6, ["main"]["temp"]))
