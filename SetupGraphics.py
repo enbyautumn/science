@@ -14,6 +14,7 @@ print("For a complete five day forecast, please wait until we've actually finish
 print("For specific charts, see the below instructions.")
 print("To access a temperature graph, press 1")
 print("To access a humidity graph, press 2")
+print("To access a pressure graph, press 3")
 number = input ("Enter a number: ")
 number = int(number)
 
@@ -56,10 +57,29 @@ while true:
     ax.grid(True)
     plt.show()
       
+  elif number == 3:
+    ax.scatter(data(x, ["main"]["pressure"]))
+    ax.scatter(data(x+1, ["main"]["pressure"]))
+    ax.scatter(data(x+2, ["main"]["pressure"]))
+    ax.scatter(data(x+3, ["main"]["pressure"]))
+    ax.scatter(data(x+4, ["main"]["pressure"]))                
+    ax.scatter(data(x+5, ["main"]["pressure"]))
+    ax.scatter(data(x+6, ["main"]["pressure"]))
+                 
+    ax.set_xlabel('Days', fontsize=15)
+    ax.set_ylabel('Pressure', fontsize=15)
+    ax.set_title('Pressure Chart')
+
+    fig, ax = plt.subplots()
+    ax.grid(True)
+    plt.show()
+    
+    
   else:
     print("Sorry, I din't get that. Please re-enter your number")
     print("To access a temperature graph, press 1") 
     print("To access a humidity graph, press 2")
+    print("TO access a pressure graph, press 3")
     number = input ("Enter a number: ")
     number = int(number)                      
 
