@@ -39,7 +39,7 @@ while true:
     ax.grid(True)
     plt.show()
                               
-  else if number == 2:
+  elif number == 2:
     ax.scatter(data(x, ["main"]["humidity"]))
     ax.scatter(data(x+1, ["main"]["humidity"]))
     ax.scatter(data(x+2, ["main"]["humidity"]))
