@@ -10,6 +10,7 @@ data = json.loads(data)
 x = random.randrange(0, 1000)
 
 print("Temperature graph = 1")
+print("Humidity graph = 2")
 number = input ("Enter a number: ")
 number = int(number)
 
@@ -35,6 +36,23 @@ while true:
     ax.grid(True)
     plt.show()
                               
+  else if number == 2:
+    ax.scatter(data(x, ["main"]["humidity"]))
+    ax.scatter(data(x+1, ["main"]["humidity"]))
+    ax.scatter(data(x+2, ["main"]["humidity"]))
+    ax.scatter(data(x+3, ["main"]["humidity"]))
+    ax.scatter(data(x+4, ["main"]["humidity"]))                
+    ax.scatter(data(x+5, ["main"]["humidity"]))
+    ax.scatter(data(x+6, ["main"]["humidity"]))
+                 
+    ax.set_xlabel('Days', fontsize=15)
+    ax.set_ylabel('Humidity', fontsize=15)
+    ax.set_title('Humidity Chart')
+
+    fig, ax = plt.subplots()
+    ax.grid(True)
+    plt.show()
+      
   else:
     print("Sorry, I din't get that. Please re-enter your number")
     print("Temperature graph = 1")                       
