@@ -9,8 +9,11 @@ data = json.loads(data)
 
 x = random.randrange(0, 1000)
 
-print("Temperature graph = 1")
-print("Humidity graph = 2")
+
+print("For a complete five day forecast, please wait until we've actually finished this.")
+print("For specific charts, see the below instructions.")
+print("To access a temperature graph, press 1")
+print("To access a humidity graph, press 2")
 number = input ("Enter a number: ")
 number = int(number)
 
