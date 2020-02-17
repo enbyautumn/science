@@ -58,7 +58,8 @@ while true:
       
   else:
     print("Sorry, I din't get that. Please re-enter your number")
-    print("Temperature graph = 1")                       
+    print("To access a temperature graph, press 1") 
+    print("To access a humidity graph, press 2")
     number = input ("Enter a number: ")
     number = int(number)                      
 
