@@ -81,7 +81,9 @@ while true:
     print("To access a humidity graph, press 2")
     print("TO access a pressure graph, press 3")
     number = input ("Enter a number: ")
-    number = int(number)                      
+    number = int(number)
+ 
+print(str(weather_description))
 
 
 
