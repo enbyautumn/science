@@ -51,7 +51,7 @@ while true:
                  
     ax.set_xlabel('Days', fontsize=15)
     ax.set_ylabel('Humidity', fontsize=15)
-    ax.set_title('Humidity Chart')
+    ax.set_title('Humidity Chart (in percentage)')
 
     fig, ax = plt.subplots()
     ax.grid(True)
@@ -68,7 +68,7 @@ while true:
                  
     ax.set_xlabel('Days', fontsize=15)
     ax.set_ylabel('Pressure', fontsize=15)
-    ax.set_title('Pressure Chart')
+    ax.set_title('Atmospheric Pressure Chart (in hPa units)')
 
     fig, ax = plt.subplots()
     ax.grid(True)
