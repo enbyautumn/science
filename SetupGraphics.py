@@ -18,10 +18,12 @@ print("For the complete 5-7 day forecast, please wait until we've actually finis
 text = colored("For specific charts, see the below instructions.", 'red')
 print(text) 
 
-text = colored("To access a temperature graph, press 1", 'green')
-text = colored("To access a humidity graph, press 2", 'green')
-text = colored("To access a pressure graph, press 3", 'green')
-print(text)
+texta = colored("To access a temperature graph, press 1", 'green')
+textb = colored("To access a humidity graph, press 2", 'green')
+textc = colored("To access a pressure graph, press 3", 'green')
+print(texta)
+print(textb)
+print(textc)
 
 number = input ("Enter a number: ")
 number = int(number)
