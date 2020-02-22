@@ -2,6 +2,8 @@ import matplotlib
 matplotlib.use('PS')
 import matplotlib.pyplot as plt
 from numpy.random import rand
+import sys 
+from termcolor import colored, cprint 
 
 net = NetworkReader.readFrom('/Users/mac/weights.xml') 
 data = open("/Users/mac/data.json", "r").read()
@@ -13,7 +15,9 @@ print("Welcome to (Insert name here), one of, if not the highest grade weather f
 print("Currently, we can only provide graphs for you to view as our 5-7 day forecast is still under cunstruction")
 print("For the complete 5-7 day forecast, please wait until we've actually finished this.")
 
-print("For specific charts, see the below instructions.")
+text = colored("For specific charts, see the below instructions.", 'red')
+print(text) 
+
 print("To access a temperature graph, press 1")
 print("To access a humidity graph, press 2")
 print("To access a pressure graph, press 3")
