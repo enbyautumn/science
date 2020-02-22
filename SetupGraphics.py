@@ -9,6 +9,7 @@ data = json.loads(data)
 
 x = random.randrange(0, 1000)
 
+print("Welcome to (Insert name here), one of, if not the highest grade weather forecasting station you can find")
 
 print("For a complete five day forecast, please wait until we've actually finished this.")
 print("For specific charts, see the below instructions.")
