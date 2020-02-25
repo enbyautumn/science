@@ -101,9 +101,9 @@ import time
 start = time.time()
 
 from pybrain.supervised.trainers import BackpropTrainer
-net = buildNetwork(2, 3, 5, 3, 1)
-trainer = BackpropTrainer(net, ds, verbose=False)
-trainer.trainUntilConvergence(maxEpochs=10000, verbose=True)
+net = buildNetwork(2, 5, 3, 1)
+trainer = BackpropTrainer(net, ds, verbose=True)
+trainer.trainUntilConvergence(maxEpochs=1000, verbose=True)
 NetworkWriter.writeToFile(net, '/Users/mac/weights.xml')
 print(round(net.activate([1,1])))
 print(round(net.activate([3,2])))
