@@ -85,7 +85,7 @@ from pybrain.tools.xml.networkreader import NetworkReader
 ds = SupervisedDataSet(2, 1)
 
 
-data = open("/Users/mac/data.json", "r").read()
+data = open("Z:\data.json", "r").read()
 data = json.loads(data)
 len = len(data)
 
@@ -104,7 +104,7 @@ from pybrain.supervised.trainers import BackpropTrainer
 net = buildNetwork(2, 5, 3, 1)
 trainer = BackpropTrainer(net, ds, verbose=True)
 trainer.trainUntilConvergence(maxEpochs=1000, verbose=True)
-NetworkWriter.writeToFile(net, '/Users/mac/weights.xml')
+NetworkWriter.writeToFile(net, 'Z:\weights.xml')
 print(round(net.activate([1,1])))
 print(round(net.activate([3,2])))
 print(round(net.activate([3,3])))
@@ -116,7 +116,7 @@ done = time.time()
 elapsed = done - start
 print(elapsed)
 
-f = open("/Users/mac/times.txt", "a")
+f = open("Z:\times.txt", "a")
 f.write(elapsed)
 f.close()
 
