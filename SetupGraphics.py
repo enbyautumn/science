@@ -15,12 +15,13 @@ print("Welcome to (Insert name here), one of, if not the highest grade weather f
 print("Currently, we can only provide graphs for you to view as our 5-7 day forecast is still under cunstruction")
 print("For the complete 5-7 day forecast, please wait until we've actually finished this.")
 
+
 text = colored("For specific charts, see the below instructions.", 'red')
 print(text) 
 
-texta = colored("To access a temperature graph, press 1", 'green')
-textb = colored("To access a humidity graph, press 2", 'green')
-textc = colored("To access a pressure graph, press 3", 'green')
+texta = colored("To access a temperature graph, press 2", 'green')
+textb = colored("To access a humidity graph, press 3", 'green')
+textc = colored("To access a pressure graph, press 4", 'green')
 print(texta)
 print(textb)
 print(textc)
@@ -34,7 +35,11 @@ while true:
   volume = (15 * data.volume[:-2] / data.volume[0])**2
   close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
-  if number == 1:
+  if nuber == 1: 
+    print("Please wait for our 5-day forcast to be coplete")
+    
+    
+  if number == 2:
     ax.scatter(data(x, ["main"]["temp"]))
     ax.scatter(data(x+1, ["main"]["temp"]))
     ax.scatter(data(x+2, ["main"]["temp"]))
@@ -51,7 +56,7 @@ while true:
     ax.grid(True)
     plt.show()
                               
-  elif number == 2:
+  elif number == 3:
     ax.scatter(data(x, ["main"]["humidity"]))
     ax.scatter(data(x+1, ["main"]["humidity"]))
     ax.scatter(data(x+2, ["main"]["humidity"]))
@@ -68,7 +73,7 @@ while true:
     ax.grid(True)
     plt.show()
       
-  elif number == 3:
+  elif number == 4:
     ax.scatter(data(x, ["main"]["pressure"]))
     ax.scatter(data(x+1, ["main"]["pressure"]))
     ax.scatter(data(x+2, ["main"]["pressure"]))
@@ -88,9 +93,9 @@ while true:
     
   else:
     print("Sorry, I din't get that. Please re-enter your number")
-    print("To access a temperature graph, press 1") 
-    print("To access a humidity graph, press 2")
-    print("TO access a pressure graph, press 3")
+    print("To access a temperature graph, press 2") 
+    print("To access a humidity graph, press 3")
+    print("TO access a pressure graph, press 4")
     number = input ("Enter a number: ")
     number = int(number)
  
