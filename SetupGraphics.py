@@ -37,7 +37,7 @@ while true:
 
   if nuber == 1: 
     print("Please wait for our 5-day forcast to be coplete")
-    
+    print(str(weather_description))
     
   if number == 2:
     ax.scatter(data(x, ["main"]["temp"]))
@@ -99,7 +99,7 @@ while true:
     number = input ("Enter a number: ")
     number = int(number)
  
-print(str(weather_description))
+
 
 
 
