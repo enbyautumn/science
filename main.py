@@ -101,7 +101,8 @@ import time
 start = time.time()
 
 from pybrain.supervised.trainers import BackpropTrainer
-net = buildNetwork(2, 5, 3, 1)
+#net = buildNetwork(2, 5, 3, 1)
+net = NetworkReader.readFrom('Z:\weights.xml') 
 trainer = BackpropTrainer(net, ds, verbose=True)
 while True:
 	trainer.trainUntilConvergence(maxEpochs=50, verbose=True)
