@@ -103,8 +103,10 @@ start = time.time()
 from pybrain.supervised.trainers import BackpropTrainer
 net = buildNetwork(2, 5, 3, 1)
 trainer = BackpropTrainer(net, ds, verbose=True)
-trainer.trainUntilConvergence(maxEpochs=1000, verbose=True)
-NetworkWriter.writeToFile(net, 'Z:\weights.xml')
+while True:
+	trainer.trainUntilConvergence(maxEpochs=50, verbose=True)
+	NetworkWriter.writeToFile(net, 'Z:\weights.xml') 
+	print("Trained another 50")
 print(round(net.activate([1,1])))
 print(round(net.activate([3,2])))
 print(round(net.activate([3,3])))
