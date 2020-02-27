@@ -36,7 +36,7 @@ while true:
   close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
   if nuber == 1: 
-    print("Please wait for our 5-day forcast to be coplete")
+    print("Please wait for our 5-day forcast to be complete")
     print(str(weather_description))
     
   if number == 2:
