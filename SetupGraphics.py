@@ -13,7 +13,6 @@ x = random.randrange(0, 1000)
 
 print("Welcome to (Insert name here), one of, if not the highest grade weather forecasting station you can find")
 print("Currently, we can only provide graphs for you to view as our 5-7 day forecast is still under cunstruction")
-print("For the complete 5-7 day forecast, please wait until we've actually finished this.")
 
 
 text = colored("For specific charts, see the below instructions.", 'red')
@@ -22,9 +21,11 @@ print(text)
 texta = colored("To access a temperature graph, press 2", 'green')
 textb = colored("To access a humidity graph, press 3", 'green')
 textc = colored("To access a pressure graph, press 4", 'green')
+textd = colored("To access previous weather data, press 5", 'green')
 print(texta)
 print(textb)
 print(textc)
+print(textd)
 
 number = input ("Enter a number: ")
 number = int(number)
@@ -89,6 +90,10 @@ while true:
     fig, ax = plt.subplots()
     ax.grid(True)
     plt.show()
+    
+  elif number == 5: 
+    number2 = input ("Enter the date you would like to view. When entering a date, please list the _______ of the date: ")
+    number2 = int(number2)
     
     
   else:
