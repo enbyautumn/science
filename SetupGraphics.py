@@ -92,6 +92,7 @@ while true:
     plt.show()
     
   elif number == 5: 
+    
     number2 = input ("Enter the date you would like to view (You will only be able to access dates from 2014 onwards. When entering a date, please list the _______ of the date: ")
     number2 = int(number2)
     
