@@ -85,7 +85,7 @@ from pybrain.tools.xml.networkreader import NetworkReader
 ds = SupervisedDataSet(2, 1)
 
 
-data = open("Z:\7data.json", "r").read()
+data = open("Z:\sevendata.json", "r").read()
 data = json.loads(data)
 len = len(data)
 
