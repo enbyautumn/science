@@ -36,11 +36,11 @@ while true:
   volume = (15 * data.volume[:-2] / data.volume[0])**2
   close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
-  if nuber == 1: 
+  if number == 1: 
     print("Please wait for our 5-day forcast to be complete")
     print(str(weather_description))
     
-  if number == 2:
+  elif number == 2:
     ax.scatter(data(x, ["main"]["temp"]))
     ax.scatter(data(x+1, ["main"]["temp"]))
     ax.scatter(data(x+2, ["main"]["temp"]))
