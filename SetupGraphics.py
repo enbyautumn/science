@@ -92,15 +92,21 @@ while true:
     plt.show()
     
   elif number == 5: 
-    number2 = input ("Enter the date you would like to view. When entering a date, please list the _______ of the date: ")
+    number2 = input ("Enter the date you would like to view (You will only be able to access dates from 2014 onwards. When entering a date, please list the _______ of the date: ")
     number2 = int(number2)
+    
+    data = open("/Users/mac/data.json", "r").read()
+    data = json.loads(data)
+    
+    print(data(x, ['main']))
     
     
   else:
     print("Sorry, I din't get that. Please re-enter your number")
     print("To access a temperature graph, press 2") 
     print("To access a humidity graph, press 3")
-    print("TO access a pressure graph, press 4")
+    print("To access a pressure graph, press 4")
+    print("To access previous weather data, press 5")
     number = input ("Enter a number: ")
     number = int(number)
  
