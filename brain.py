@@ -11,7 +11,7 @@ import random
 
 
 net = NetworkReader.readFrom('Z:\weights.xml') 
-data = open("Z:\data.json", "r").read()
+data = open("Z:\7data.json", "r").read()
 data = json.loads(data)
 
 #    ((data[x]["main"]["humidity"],data[x]["main"]["pressure"]),(data[x+1]["main"]["temp"])
