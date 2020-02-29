@@ -12,16 +12,16 @@ data = json.loads(data)
 x = random.randrange(0, 1000)
 
 print("Welcome to (Insert name here), one of, if not the highest grade weather forecasting station you can find")
-print("Currently, we can only provide graphs for you to view as our 5-7 day forecast is still under cunstruction")
-
 
 text = colored("For specific charts, see the below instructions.", 'red')
 print(text) 
 
+text = colored("To access the complete 5-day forcast, press 1", 'blue')
 texta = colored("To access a temperature graph, press 2", 'green')
 textb = colored("To access a humidity graph, press 3", 'green')
 textc = colored("To access a pressure graph, press 4", 'green')
 textd = colored("To access previous weather data, press 5", 'green')
+print(text)
 print(texta)
 print(textb)
 print(textc)
@@ -38,7 +38,7 @@ close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
 if number == 1: 
   print("Please wait for our 5-day forcast to be complete")
-  print(str(weather_description))
+  print(data(x, ["weather"]))
     
 elif number == 2:
   ax.scatter(data(x, ["main"]["temp"]))
@@ -106,14 +106,13 @@ elif number == 5:
     number2 = int(number2)
       
   elif answer == 0:
-    
     number2 = input("enter the date:")
     number2 = int(number2)
     
-    
   data = open("/Users/mac/data.json", "r").read()
   data = json.loads(data)
-  print(data(number2, ['dt_iso']))
+  date = json.lods(data, ["dt_iso"])
+  print(data(number2, ["dt_iso"]["weather"]))
     
     
 else:
