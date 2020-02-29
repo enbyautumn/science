@@ -115,7 +115,7 @@ elif number == 5:
   data = open("/Users/mac/data.json", "r").read()
   data = json.loads(data)
   date = ["dt_iso",num2]
-  print(date(["weather"])
+  print(date(["weather"]))
     
     
 else:
