@@ -111,7 +111,7 @@ while true:
       data = open("/Users/mac/data.json", "r").read()
       data = json.loads(data)
     
-      print(data(x, ['dt_iso']))
+      print(data(number2, ['dt_iso']))
     
     
   else:
