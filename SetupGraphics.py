@@ -105,17 +105,17 @@ elif number == 5:
     print("Finally include '+0000 UTC' at the end.")
     print("For example, if the date was Jan 2 of 2013, at 13:00, enter 2013-01-02 13:00:00 +0000 UTC")
     
-    number2 = input("enter the date:")
-    number2 = int(number2)
+    num2 = input("enter the date:")
+    num2 = int(num2)
       
   elif answer == 0:
-    number2 = input("enter the date:")
-    number2 = int(number2)
+    num2 = input("enter the date:")
+    num2 = int(num2)
     
   data = open("/Users/mac/data.json", "r").read()
   data = json.loads(data)
-  date = json.lods(data, ["dt_iso"])
-  print(data(number2, ["dt_iso"]["weather"]))
+  date = ["dt_iso":num2]
+  print(date(["weather"])
     
     
 else:
