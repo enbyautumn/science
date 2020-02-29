@@ -1,6 +1,8 @@
 THIS IS A VERY IMPORTANT BREAKDOWN OF THE DATA
 
 - this is one data piece that I pulled from the data and broke down
+- The "weather" section could become very useful.
+- Also, the "dt" sections are a bit confusing -- One seems to consist of a strung set, consisting of the time and date, while the other appears to be some sort of ID which I can't break down.
 
 
 { "city_name":"Untitled",
