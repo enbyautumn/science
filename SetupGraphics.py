@@ -93,16 +93,16 @@ while true:
     
   elif number == 5: 
     
-    print("would you like instructions on how to enter the date?")
-    answer = input("y/n")
+    print("would you like instructions on how to enter the date? Yes = 1. No = 0")
+    answer = input("1/0")
     answer = int(answer)
     
-    if answer == "y"
+    if answer == 1:
       print("Enter the date you would like to view (You will only be able to access dates from 2014 onwards.)")
       print("when you enter the date, you must enter it in the form of year-month-day.")
       print("For example, if the date was Jan 2 of 2013, enter 2013-01-02")
     
-    elif answer == "n"
+    elif answer == 0:
     
       number2 = input("enter the date:")
       number2 = int(number2)
