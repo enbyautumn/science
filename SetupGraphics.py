@@ -93,13 +93,18 @@ while true:
     
   elif number == 5: 
     
-    number2 = input ("Enter the date you would like to view (You will only be able to access dates from 2014 onwards. When entering a date, please list the _______ of the date: ")
+    print("Enter the date you would like to view (You will only be able to access dates from 2014 onwards.)")
+    print("when you enter the date, you must enter it in the form of year-month-day.")
+    print("For example, if the date was Jan 2 of 2013, enter 2013-01-02")
+    
+    number2 = input("enter the date:")
     number2 = int(number2)
+    
     
     data = open("/Users/mac/data.json", "r").read()
     data = json.loads(data)
     
-    print(data(x, ['main']))
+    print(data(x, ['dt_iso']))
     
     
   else:
