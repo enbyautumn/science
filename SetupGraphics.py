@@ -3,6 +3,7 @@ matplotlib.use('PS')
 import matplotlib.pyplot as plt
 from numpy.random import rand
 import sys 
+import json
 from termcolor import colored, cprint 
 
 net = NetworkReader.readFrom('/Users/mac/weights.xml') 
@@ -100,7 +101,9 @@ elif number == 5:
   if answer == 1:
     print("Enter the date you would like to view (You will only be able to access dates from 2014 onwards.)")
     print("when you enter the date, you must enter it in the form of year-month-day.")
-    print("For example, if the date was Jan 2 of 2013, enter 2013-01-02")
+    print("Also include the hour, in 24-hour time in the form of 00:00:00.")
+    print("Finally include '+0000 UTC' at the end.")
+    print("For example, if the date was Jan 2 of 2013, at 13:00, enter 2013-01-02 13:00:00 +0000 UTC")
     
     number2 = input("enter the date:")
     number2 = int(number2)
