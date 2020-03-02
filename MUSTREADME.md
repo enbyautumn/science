@@ -2,7 +2,7 @@ THIS IS A VERY IMPORTANT BREAKDOWN OF THE DATA
 
 - this is one data piece that I pulled from the data and broke down
 - The "weather" section could become very useful.
-- Also, the "dt" sections are a bit confusing -- One seems to consist of a strung set, consisting of the time and date, while the other appears to be some sort of ID which I can't break down.
+- Also, the "dt" sections are a bit confusing -- One seems to consist of a strung set, consisting of the time and date, while the other appears to be some sort of ID which I can't break down. ----- The dt section is the date and time formatted in unix timestamp https://www.convert-unix-timestamp.com/unixtime/1356998400#.Xl1dO45zy00
 
 
 { "city_name":"Untitled",
