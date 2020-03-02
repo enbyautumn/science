@@ -108,12 +108,10 @@ while True:
 	trainer.trainUntilConvergence(maxEpochs=50, verbose=True)
 	NetworkWriter.writeToFile(net, 'Z:\weights.xml') 
 	print("Trained another 50")
-
-done = time.time()
-elapsed = done - start
-print(elapsed)
-
-f = open("Z:\times.txt", "a")
-f.write(elapsed)
-f.close()
-
+	done = time.time()
+	elapsed = done - start
+	print(elapsed)
+	f = open("Z:\times.txt", "a")
+	f.write(elapsed)
+	f.close()
+	start = time.time()
