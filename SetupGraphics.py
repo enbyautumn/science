@@ -38,7 +38,10 @@ number = int(number)
 volume = (15 * data.volume[:-2] / data.volume[0])**2
 close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
-if number == 2: 
+if number == 1: 
+  print(data
+
+elif number == 2: 
   print("Please wait for our 5-day forcast to be complete")
   print(data(x, ["weather"]))
   
