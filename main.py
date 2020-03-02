@@ -91,7 +91,7 @@ len = len(data)
 
 for x in range(len):
 	try:
-		ds.addSample((data[x]["main"]["temperature"],[data[x]["main"]["humidity"],data[x]["main"]["pressure"]),(data[x+1]["main"]["temp"]))
+		ds.addSample((data[x]["main"]["temperature"],[data[x]["main"]["humidity"],data[x]["main"]["pressure"]),(data[x+24]["main"]["temp"],data[x+48]["main"]["temp"],data[x+72]["main"]["temp"]))
 	except:
 		print("nu")
 #print(data[x+1]["main"]["temp"])
@@ -108,12 +108,6 @@ while True:
 	trainer.trainUntilConvergence(maxEpochs=50, verbose=True)
 	NetworkWriter.writeToFile(net, 'Z:\weights.xml') 
 	print("Trained another 50")
-print(round(net.activate([1,1])))
-print(round(net.activate([3,2])))
-print(round(net.activate([3,3])))
-print(round(net.activate([4,1])))
-print(round(net.activate([1,2])))
-print(round(net.activate([4,4])))
 
 done = time.time()
 elapsed = done - start
