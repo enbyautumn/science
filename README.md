@@ -10,4 +10,5 @@ Right input is multiplied by right number
 
 # Website Access
 I just created a google cite, so feel free to go on and edit!!!!
+
 For the website we should create a server api so we can actually get requests from a website - https://stackoverflow.com/questions/8928730/processing-http-get-input-parameter-on-server-side-in-python/8930440
