@@ -17,13 +17,14 @@ x = random.randrange(0, 1000)
 print("Welcome to (Insert name here), one of, if not the highest grade weather forecasting station you can find")
 
 text = colored("To access today's weather, press 1", 'blue')
+text2 = colored("To access the complete 5-day forcast, press 2", 'blue')
+text3 = colored("To access the complete 7-day forcast, press 3", 'blue')
 print(text)
-text = colored("To access the complete 5-day forcast, press 2", 'blue')
-print(text)
-text = colored("To access the complete 7-day forcast, press 3", 'blue')
-print(text)
+print(text2)
+print(text3)
 
 print("For specific charts, see the below instructions.")
+
 texta = colored("To access a temperature graph, press 4", 'green')
 textb = colored("To access a humidity graph, press 5", 'green')
 textc = colored("To access a pressure graph, press 6", 'green')
