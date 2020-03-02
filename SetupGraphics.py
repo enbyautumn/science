@@ -5,7 +5,9 @@ from numpy.random import rand
 import sys 
 import json
 from termcolor import colored, cprint 
+from datetime import date
 
+today = date.today()
 net = NetworkReader.readFrom('/Users/mac/weights.xml') 
 data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
@@ -39,7 +41,9 @@ volume = (15 * data.volume[:-2] / data.volume[0])**2
 close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
 if number == 1: 
-  print(data
+  print("Today's date:", today)
+  date2 = ["dt_iso", today]
+  print(date2(["weather"]))
 
 elif number == 2: 
   print("Please wait for our 5-day forcast to be complete")
@@ -122,7 +126,7 @@ elif number == 7:
     
   data = open("/Users/mac/data.json", "r").read()
   data = json.loads(data)
-  date = ["dt_iso",num2]
+  date = ["dt_iso", num2]
   print(date(["weather"]))
     
     
