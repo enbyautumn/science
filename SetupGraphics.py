@@ -137,7 +137,6 @@ else:
   print("To access the complete 5-day forcast, press 2")
   print("To access the complete 7-day forcast, press 3")
   
-  
   print("To access a temperature graph, press 4") 
   print("To access a humidity graph, press 5")
   print("To access a pressure graph, press 6")
