@@ -6,7 +6,10 @@ import sys
 import json
 from termcolor import colored, cprint 
 from datetime import date
+import time
 
+
+t = time.localtime()
 today = date.today()
 net = NetworkReader.readFrom('/Users/mac/weights.xml') 
 data = open("/Users/mac/data.json", "r").read()
@@ -43,7 +46,14 @@ close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
 if number == 1: 
   print("Today's date:", today)
-  date2 = ["dt_iso", today]
+  print(current_time)
+  current_time = time.strftime("%H%M%S", t)
+  round(float(current_time), -4)
+  
+  current_time = time.strftime("%H:%M:%S", t)
+
+  today2 = today, current_time, "+0000 UTC"
+  date2 = ["dt_iso", today2]
   print(date2(["weather"]))
 
 elif number == 2: 
