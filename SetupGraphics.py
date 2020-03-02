@@ -133,10 +133,15 @@ elif number == 7:
     
 else:
   print("Sorry, I din't get that. Please re-enter your number")
-  print("To access a temperature graph, press 2") 
-  print("To access a humidity graph, press 3")
-  print("To access a pressure graph, press 4")
-  print("To access previous weather data, press 5")
+  print("To access today's weather, press 1")
+  print("To access the complete 5-day forcast, press 2")
+  print("To access the complete 7-day forcast, press 3")
+  
+  
+  print("To access a temperature graph, press 4") 
+  print("To access a humidity graph, press 5")
+  print("To access a pressure graph, press 6")
+  print("To access previous weather data, press 7")
   number = input ("Enter a number: ")
   number = int(number)
  
