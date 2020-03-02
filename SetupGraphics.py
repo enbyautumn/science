@@ -48,11 +48,11 @@ if number == 1:
   print("Today's date:", today)
   print(current_time)
   current_time = time.strftime("%H%M%S", t)
-  round(float(current_time), -4)
+  time3 = round(float(current_time), -4)
   
   current_time = time.strftime("%H:%M:%S", t)
 
-  today2 = today, current_time, "+0000 UTC"
+  today2 = today, time3, "+0000 UTC"
   date2 = ["dt_iso", today2]
   print(date2(["weather"]))
 
