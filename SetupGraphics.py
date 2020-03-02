@@ -14,14 +14,18 @@ x = random.randrange(0, 1000)
 
 print("Welcome to (Insert name here), one of, if not the highest grade weather forecasting station you can find")
 
-text = colored("To access the complete 5-day forcast, press 1", 'blue')
+text = colored("To access today's weather, press 1", 'blue')
+print(text)
+text = colored("To access the complete 5-day forcast, press 2", 'blue')
+print(text)
+text = colored("To access the complete 7-day forcast, press 3", 'blue')
 print(text)
 
 print("For specific charts, see the below instructions.")
-texta = colored("To access a temperature graph, press 2", 'green')
-textb = colored("To access a humidity graph, press 3", 'green')
-textc = colored("To access a pressure graph, press 4", 'green')
-textd = colored("To access previous weather data, press 5", 'green')
+texta = colored("To access a temperature graph, press 4", 'green')
+textb = colored("To access a humidity graph, press 5", 'green')
+textc = colored("To access a pressure graph, press 6", 'green')
+textd = colored("To access previous weather data, press 7", 'green')
 print(texta)
 print(textb)
 print(textc)
@@ -34,11 +38,15 @@ number = int(number)
 volume = (15 * data.volume[:-2] / data.volume[0])**2
 close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
-if number == 1: 
+if number == 2: 
   print("Please wait for our 5-day forcast to be complete")
   print(data(x, ["weather"]))
-    
-elif number == 2:
+  
+elif number == 3:
+  print("Please wait for our 5-day forcast to be complete")
+  print(data(x, ["weather"]))
+  
+elif number == 4:
   ax.scatter(data(x, ["main"]["temp"]))
   ax.scatter(data(x+1, ["main"]["temp"]))
   ax.scatter(data(x+2, ["main"]["temp"]))
@@ -55,7 +63,7 @@ elif number == 2:
   ax.grid(True)
   plt.show()
                               
-elif number == 3:
+elif number == 5:
   ax.scatter(data(x, ["main"]["humidity"]))
   ax.scatter(data(x+1, ["main"]["humidity"]))
   ax.scatter(data(x+2, ["main"]["humidity"]))
@@ -72,7 +80,7 @@ elif number == 3:
   ax.grid(True)
   plt.show()
       
-elif number == 4:
+elif number == 6:
   ax.scatter(data(x, ["main"]["pressure"]))
   ax.scatter(data(x+1, ["main"]["pressure"]))
   ax.scatter(data(x+2, ["main"]["pressure"]))
@@ -89,7 +97,7 @@ elif number == 4:
   ax.grid(True)
   plt.show()
     
-elif number == 5: 
+elif number == 7: 
     
   print("would you like instructions on how to enter the date? Yes = 1, No = 0")
   answer = input("1/0")
