@@ -14,15 +14,14 @@ x = random.randrange(0, 1000)
 
 print("Welcome to (Insert name here), one of, if not the highest grade weather forecasting station you can find")
 
-text = colored("For specific charts, see the below instructions.", 'red')
-print(text) 
-
 text = colored("To access the complete 5-day forcast, press 1", 'blue')
+print(text)
+
+print("For specific charts, see the below instructions.")
 texta = colored("To access a temperature graph, press 2", 'green')
 textb = colored("To access a humidity graph, press 3", 'green')
 textc = colored("To access a pressure graph, press 4", 'green')
 textd = colored("To access previous weather data, press 5", 'green')
-print(text)
 print(texta)
 print(textb)
 print(textc)
@@ -31,8 +30,6 @@ print(textd)
 number = input ("Enter a number: ")
 number = int(number)
 
-
-  
 # Marker size in units of points^2
 volume = (15 * data.volume[:-2] / data.volume[0])**2
 close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
