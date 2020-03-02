@@ -82,7 +82,7 @@ from pybrain.tools.shortcuts import buildNetwork
 from pybrain.datasets import SupervisedDataSet
 from pybrain.tools.xml.networkwriter import NetworkWriter
 from pybrain.tools.xml.networkreader import NetworkReader
-ds = SupervisedDataSet(3, 1)
+ds = SupervisedDataSet(3, 3)
 
 
 data = open("Z:\sevendata.json", "r").read()
