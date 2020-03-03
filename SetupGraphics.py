@@ -5,12 +5,9 @@ from numpy.random import rand
 import sys 
 import json
 from termcolor import colored, cprint 
-from datetime import date
-import time
+from datetime import datetime
 
-
-t = time.localtime()
-today = date.today()
+now = datetime.now()
 net = NetworkReader.readFrom('/Users/mac/weights.xml') 
 data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
@@ -45,15 +42,16 @@ volume = (15 * data.volume[:-2] / data.volume[0])**2
 close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
 
 if number == 1: 
-  print("Today's date:", today)
-  print(current_time)
-  current_time = time.strftime("%H%M%S", t)
-  time3 = round(float(current_time), -4)
   
-  current_time = time.strftime("%H:%M:%S", t)
+  def rounder(t):
+    if t.minute >= 30:
+        return t.replace(second=0, microsecond=0, minute=0, hour=t.hour+1)
+    else:
+        return t.replace(second=0, microsecond=0, minute=0)
 
-  today2 = today, time3, "+0000 UTC"
-  date2 = ["dt_iso", today2]
+  hi = rounder(now)
+  today = hi, "+0000 UTC"
+  date2 = ["dt_iso", today]
   print(date2(["weather"]))
 
 elif number == 2: 
