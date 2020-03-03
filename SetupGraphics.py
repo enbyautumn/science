@@ -17,18 +17,20 @@ x = random.randrange(0, 1000)
 print("Welcome to (Insert name here), one of, if not the highest grade weather forecasting station you can find")
 
 text = colored("To access today's weather, press 1", 'blue')
-text2 = colored("To access the complete 5-day forcast, press 2", 'blue')
-text3 = colored("To access the complete 7-day forcast, press 3", 'blue')
+text2 = colored("To access the 1-hour forcast, press 2", 'blue')
+text3 = colored("To access the 10-hour forcast, press 3", 'blue')
+text4 = colored("To access the 24-hour forecast, press 4", 'blue')
 print(text)
 print(text2)
 print(text3)
+print(text4)
 
 print("For specific charts, see the below instructions.")
 
-texta = colored("To access a temperature graph, press 4", 'green')
-textb = colored("To access a humidity graph, press 5", 'green')
-textc = colored("To access a pressure graph, press 6", 'green')
-textd = colored("To access previous weather data, press 7", 'green')
+texta = colored("To access a temperature graph, press 5", 'green')
+textb = colored("To access a humidity graph, press 6", 'green')
+textc = colored("To access a pressure graph, press 7", 'green')
+textd = colored("To access previous weather data, press 8", 'green')
 print(texta)
 print(textb)
 print(textc)
@@ -54,15 +56,19 @@ if number == 1:
   date2 = ["dt_iso", today]
   print(date2(["weather"]))
 
-elif number == 2: 
-  print("Please wait for our 5-day forcast to be complete")
+elif number == 2:
+  print("Please wait for our 1-hour forcast to be complete")
   print(data(x, ["weather"]))
   
-elif number == 3:
-  print("Please wait for our 5-day forcast to be complete")
+elif number == 3: 
+  print("Please wait for our 10-hour forcast to be complete")
   print(data(x, ["weather"]))
   
 elif number == 4:
+  print("Please wait for our 24-hour forcast to be complete")
+  print(data(x, ["weather"]))
+  
+elif number == 5:
   ax.scatter(data(x, ["main"]["temp"]))
   ax.scatter(data(x+1, ["main"]["temp"]))
   ax.scatter(data(x+2, ["main"]["temp"]))
@@ -79,7 +85,7 @@ elif number == 4:
   ax.grid(True)
   plt.show()
                               
-elif number == 5:
+elif number == 6:
   ax.scatter(data(x, ["main"]["humidity"]))
   ax.scatter(data(x+1, ["main"]["humidity"]))
   ax.scatter(data(x+2, ["main"]["humidity"]))
@@ -96,7 +102,7 @@ elif number == 5:
   ax.grid(True)
   plt.show()
       
-elif number == 6:
+elif number == 7:
   ax.scatter(data(x, ["main"]["pressure"]))
   ax.scatter(data(x+1, ["main"]["pressure"]))
   ax.scatter(data(x+2, ["main"]["pressure"]))
@@ -113,7 +119,7 @@ elif number == 6:
   ax.grid(True)
   plt.show()
     
-elif number == 7: 
+elif number == 8: 
     
   print("would you like instructions on how to enter the date? Yes = 1, No = 0")
   answer = input("1/0")
@@ -142,13 +148,14 @@ elif number == 7:
 else:
   print("Sorry, I din't get that. Please re-enter your number")
   print("To access today's weather, press 1")
-  print("To access the complete 5-day forcast, press 2")
-  print("To access the complete 7-day forcast, press 3")
+  ("To access the 1-hour forcast, press 2", 'blue')
+  ("To access the 10-hour forcast, press 3", 'blue')
+  ("To access the 24-hour forecast, press 4", 'blue')
   
-  print("To access a temperature graph, press 4") 
-  print("To access a humidity graph, press 5")
-  print("To access a pressure graph, press 6")
-  print("To access previous weather data, press 7")
+  print("To access a temperature graph, press 5") 
+  print("To access a humidity graph, press 6")
+  print("To access a pressure graph, press 7")
+  print("To access previous weather data, press 8")
   number = input ("Enter a number: ")
   number = int(number)
  
