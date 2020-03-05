@@ -91,7 +91,7 @@ len = len(data)
 
 for x in range(len):
 	try:
-		ds.addSample((data[x]["main"]["temperature"],[data[x]["main"]["humidity"],data[x]["main"]["pressure"]),(data[x+24]["main"]["temp"],data[x+48]["main"]["temp"],data[x+72]["main"]["temp"]))
+		ds.addSample((data[x]["main"]["temp"],data[x]["main"]["humidity"],data[x]["main"]["pressure"]),(data[x+24]["main"]["temp"],data[x+48]["main"]["temp"],data[x+72]["main"]["temp"]))
 	except:
 		print("nu")
 #print(data[x+1]["main"]["temp"])
@@ -101,7 +101,7 @@ import time
 start = time.time()
 
 from pybrain.supervised.trainers import BackpropTrainer
-#net = buildNetwork(2, 5, 3, 1)
+#net = buildNetwork(3, 5, 8, 5, 3)
 net = NetworkReader.readFrom('Z:\weights.xml') 
 trainer = BackpropTrainer(net, ds, verbose=True)
 while True:
