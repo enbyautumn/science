@@ -105,6 +105,8 @@ from pybrain.supervised.trainers import BackpropTrainer
 net = NetworkReader.readFrom('Z:\\weights.xml') 
 trainer = BackpropTrainer(net, ds, verbose=True)
 while True:
+	net = NetworkReader.readFrom('Z:\\weights.xml') 
+	trainer = BackpropTrainer(net, ds, verbose=True)
 	trainer.trainUntilConvergence(maxEpochs=10, verbose=True)
 	NetworkWriter.writeToFile(net, 'Z:\\weights.xml') 
 	print("Trained another 10")
