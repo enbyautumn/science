@@ -85,7 +85,7 @@ from pybrain.tools.xml.networkreader import NetworkReader
 ds = SupervisedDataSet(3, 3)
 
 
-data = open("Z:\sevendata.json", "r").read()
+data = open("Z:\\sevendata.json", "r").read()
 data = json.loads(data)
 len = len(data)
 
@@ -102,16 +102,16 @@ start = time.time()
 
 from pybrain.supervised.trainers import BackpropTrainer
 #net = buildNetwork(3, 5, 8, 5, 3)
-net = NetworkReader.readFrom('Z:\weights.xml') 
+net = NetworkReader.readFrom('Z:\\weights.xml') 
 trainer = BackpropTrainer(net, ds, verbose=True)
 while True:
-	trainer.trainUntilConvergence(maxEpochs=20, verbose=True)
-	NetworkWriter.writeToFile(net, 'Z:\weights.xml') 
-	print("Trained another 20")
+	trainer.trainUntilConvergence(maxEpochs=10, verbose=True)
+	NetworkWriter.writeToFile(net, 'Z:\\weights.xml') 
+	print("Trained another 10")
 	done = time.time()
 	elapsed = done - start
-	print(elapsed)
-	f = open("Z:\times.txt", "a")
-	f.write(elapsed)
+	print(str(elapsed))
+	f = open("Z:\\times.txt", "a")
+	f.write(str(elapsed))
 	f.close()
 	start = time.time()
