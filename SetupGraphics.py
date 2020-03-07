@@ -122,7 +122,7 @@ elif number == 7:
 elif number == 8: 
     
   print("would you like instructions on how to enter the date? Yes = 1, No = 0")
-  answer = input("1/0")
+  answer = input("1/0:")
   answer = int(answer)
     
   if answer == 1:
