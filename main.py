@@ -119,5 +119,5 @@ trainer = BackpropTrainer(net, ds, verbose=True)
 	start = time.time()
 """
 trainer = BackpropTrainer(net, ds, verbose=True)
-trainer.trainUntilConvergence(maxEpochs=10000, verbose=True)
+trainer.trainUntilConvergence(maxEpochs=5000, verbose=True)
 NetworkWriter.writeToFile(net, 'Z:\\weights.xml') 
