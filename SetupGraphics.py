@@ -56,7 +56,8 @@ if number == 1:
   print(date2(["weather"]))
 
   
-x = date2 = ["dt_iso", today]
+x = date2
+
 
 elif number == 2:
   print("Please wait for our 1-day forcast to be complete")
