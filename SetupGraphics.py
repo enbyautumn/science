@@ -80,7 +80,7 @@ elif number == 5:
                  
   ax.set_xlabel('Days', fontsize=15)
   ax.set_ylabel('Temperature', fontsize=15)
-  ax.set_title('Temperature Chart in Degrees Farenhite')
+  ax.set_title('Temperature Chart in Degrees Farenhite for the next 24 hours')
 
   fig, ax = plt.subplots()
   ax.grid(True)
@@ -97,7 +97,7 @@ elif number == 6:
                  
   ax.set_xlabel('Days', fontsize=15)
   ax.set_ylabel('Humidity', fontsize=15)
-  ax.set_title('Humidity Chart (in percentage)')
+  ax.set_title('Humidity Chart (in percentage) for the next 24 hours')
 
   fig, ax = plt.subplots()
   ax.grid(True)
@@ -114,7 +114,7 @@ elif number == 7:
                  
   ax.set_xlabel('Days', fontsize=15)
   ax.set_ylabel('Pressure', fontsize=15)
-  ax.set_title('Atmospheric Pressure Chart (in hPa units)')
+  ax.set_title('Atmospheric Pressure Chart (in hPa units) for the next 24 hours')
 
   fig, ax = plt.subplots()
   ax.grid(True)
