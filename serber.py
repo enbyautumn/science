@@ -1,10 +1,11 @@
 import json
-import urllib.parse
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from SimpleHTTPServer import SimpleHTTPRequestHandler
 import time
 import random
+import SocketServer
 
-class GetHandler(BaseHTTPRequestHandler):
+
+class GetHandler(SimpleHTTPRequestHandler):
     def _set_headers(self):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
@@ -13,7 +14,8 @@ class GetHandler(BaseHTTPRequestHandler):
         """This just generates an HTML document that includes `message`
         in the body. Override, or re-write this do do more interesting stuff.
         """
-        content = f"{message}"
+        
+        content = str(message)
         return content.encode("utf8")  # NOTE: must return
     def do_GET(self):
         self._set_headers()
@@ -21,6 +23,6 @@ class GetHandler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     #from BaseHTTPServer import HTTPServer
-    server = HTTPServer(('localhost', 3030), GetHandler)
+    server = SocketServer.TCPServer(("", 12345), GetHandler)
     print ('Starting server, use <Ctrl-C> to stop')
     server.serve_forever()
