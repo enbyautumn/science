@@ -149,9 +149,9 @@ elif number == 8:
 else:
   print("Sorry, I din't get that. Please re-enter your number")
   print("To access today's weather, press 1")
-  ("To access the 1-hour forcast, press 2", 'blue')
-  ("To access the 10-hour forcast, press 3", 'blue')
-  ("To access the 24-hour forecast, press 4", 'blue')
+  ("To access the 24-hour forcast, press 2", 'blue')
+  ("To access the 48-hour forcast, press 3", 'blue')
+  ("To access the 72-hour forecast, press 4", 'blue')
   
   print("To access a temperature graph, press 5") 
   print("To access a humidity graph, press 6")
