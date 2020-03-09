@@ -14,7 +14,7 @@ data = json.loads(data)
 
 x = random.randrange(0, 1000)
 
-print("Welcome to (Insert name here), one of, if not the highest grade weather forecasting station you can find")
+print("Welcome to Dover Weather, one of, if not the highest grade weather forecasting station for Dover you can find")
 
 text = colored("To access today's weather, press 1", 'blue')
 text2 = colored("To access the 1-day forcast, press 2", 'blue')
