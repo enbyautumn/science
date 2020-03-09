@@ -39,6 +39,7 @@ print(textd)
 number = input ("Enter a number: ")
 number = int(number)
 
+
 # Marker size in units of points^2
 volume = (15 * data.volume[:-2] / data.volume[0])**2
 close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
