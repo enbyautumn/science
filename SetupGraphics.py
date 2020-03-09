@@ -12,8 +12,6 @@ net = NetworkReader.readFrom('/Users/mac/weights.xml')
 data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
 
-x = random.randrange(0, 1000)
-
 print("Welcome to Dover Weather, one of, if not the highest grade weather forecasting station for Dover you can find")
 
 text = colored("To access today's weather, press 1", 'blue')
@@ -57,6 +55,10 @@ if number == 1:
   date2 = ["dt_iso", today]
   print(date2(["weather"]))
 
+  
+x = date2
+
+
 elif number == 2:
   print("Please wait for our 1-day forcast to be complete")
   print(data(x, ["weather"]))
@@ -71,12 +73,9 @@ elif number == 4:
   
 elif number == 5:
   ax.scatter(data(x, ["main"]["temp"]))
-  ax.scatter(data(x+1, ["main"]["temp"]))
-  ax.scatter(data(x+2, ["main"]["temp"]))
-  ax.scatter(data(x+3, ["main"]["temp"]))
-  ax.scatter(data(x+4, ["main"]["temp"]))                
-  ax.scatter(data(x+5, ["main"]["temp"]))
-  ax.scatter(data(x+6, ["main"]["temp"]))
+  
+  for x in range(0, 24):
+    ax.scatter(data(x+1, ["main"]["temp"]))
                  
   ax.set_xlabel('Days', fontsize=15)
   ax.set_ylabel('Temperature', fontsize=15)
@@ -88,12 +87,9 @@ elif number == 5:
                               
 elif number == 6:
   ax.scatter(data(x, ["main"]["humidity"]))
-  ax.scatter(data(x+1, ["main"]["humidity"]))
-  ax.scatter(data(x+2, ["main"]["humidity"]))
-  ax.scatter(data(x+3, ["main"]["humidity"]))
-  ax.scatter(data(x+4, ["main"]["humidity"]))                
-  ax.scatter(data(x+5, ["main"]["humidity"]))
-  ax.scatter(data(x+6, ["main"]["humidity"]))
+  
+  for x in range(0, 24):
+    ax.scatter(data(x+1, ["main"]["humidity"]))
                  
   ax.set_xlabel('Days', fontsize=15)
   ax.set_ylabel('Humidity', fontsize=15)
@@ -105,12 +101,9 @@ elif number == 6:
       
 elif number == 7:
   ax.scatter(data(x, ["main"]["pressure"]))
-  ax.scatter(data(x+1, ["main"]["pressure"]))
-  ax.scatter(data(x+2, ["main"]["pressure"]))
-  ax.scatter(data(x+3, ["main"]["pressure"]))
-  ax.scatter(data(x+4, ["main"]["pressure"]))                
-  ax.scatter(data(x+5, ["main"]["pressure"]))
-  ax.scatter(data(x+6, ["main"]["pressure"]))
+  
+  for x in range(0, 24):
+    ax.scatter(data(x+1, ["main"]["pressure"]))
                  
   ax.set_xlabel('Days', fontsize=15)
   ax.set_ylabel('Pressure', fontsize=15)
