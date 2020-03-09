@@ -58,15 +58,15 @@ if number == 1:
   print(date2(["weather"]))
 
 elif number == 2:
-  print("Please wait for our 1-hour forcast to be complete")
+  print("Please wait for our 1-day forcast to be complete")
   print(data(x, ["weather"]))
   
 elif number == 3: 
-  print("Please wait for our 10-hour forcast to be complete")
+  print("Please wait for our 2-day forcast to be complete")
   print(data(x, ["weather"]))
   
 elif number == 4:
-  print("Please wait for our 24-hour forcast to be complete")
+  print("Please wait for our 3-day forcast to be complete")
   print(data(x, ["weather"]))
   
 elif number == 5:
