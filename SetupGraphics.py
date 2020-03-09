@@ -12,8 +12,6 @@ net = NetworkReader.readFrom('/Users/mac/weights.xml')
 data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
 
-x = random.randrange(0, 1000)
-
 print("Welcome to Dover Weather, one of, if not the highest grade weather forecasting station for Dover you can find")
 
 text = colored("To access today's weather, press 1", 'blue')
@@ -56,6 +54,9 @@ if number == 1:
   today = hi, "+0000 UTC"
   date2 = ["dt_iso", today]
   print(date2(["weather"]))
+
+  
+x = date2 = ["dt_iso", today]
 
 elif number == 2:
   print("Please wait for our 1-day forcast to be complete")
