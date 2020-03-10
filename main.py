@@ -101,7 +101,7 @@ import time
 start = time.time()
 
 from pybrain.supervised.trainers import BackpropTrainer
-#net = buildNetwork(3, 5, 8, 5, 3)
+#net = buildNetwork(3, 4, 5, 6, 5, 4, 3)
 net = NetworkReader.readFrom('Z:\\weights.xml') 
 trainer = BackpropTrainer(net, ds, verbose=True)
 """while True:
