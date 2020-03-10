@@ -50,8 +50,8 @@ if number == 1:
     else:
         return t.replace(second=0, microsecond=0, minute=0)
 
-  hi = rounder(now)
-  today = hi, "+0000 UTC"
+  roundIt = rounder(now)
+  today = roundIt, "+0000 UTC"
   date2 = ["dt_iso", today]
   print(date2(["weather"]))
 
