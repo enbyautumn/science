@@ -101,8 +101,11 @@ import time
 start = time.time()
 
 from pybrain.supervised.trainers import BackpropTrainer
-#net = buildNetwork(3, 4, 5, 6, 5, 4, 3)
-net = NetworkReader.readFrom('Z:\\weights.xml') 
+if path.exists("Z:\\weights.xml"):
+	net = NetworkReader.readFrom('Z:\\weights.xml')
+else:
+	net = buildNetwork(3, 4, 5, 6, 5, 4, 3)
+	
 trainer = BackpropTrainer(net, ds, verbose=True)
 """while True:
 	net = NetworkReader.readFrom('Z:\\weights.xml') 
