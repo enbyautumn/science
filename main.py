@@ -101,6 +101,7 @@ import time
 start = time.time()
 
 from pybrain.supervised.trainers import BackpropTrainer
+from os import path
 if path.exists("Z:\\weights.xml"):
 	net = NetworkReader.readFrom('Z:\\weights.xml')
 	print("Resumed Training")
