@@ -23,6 +23,6 @@ class GetHandler(SimpleHTTPRequestHandler):
 
 if __name__ == '__main__':
     #from BaseHTTPServer import HTTPServer
-    server = SocketServer.TCPServer(("", 12345), GetHandler)
+    server = SocketServer.TCPServer(("", 443), GetHandler)
     print ('Starting server, use <Ctrl-C> to stop')
     server.serve_forever()
