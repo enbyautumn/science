@@ -140,7 +140,7 @@ elif number == 8:
     
     
 else:
-  print("Sorry, I din't get that. Please re-enter your number")
+  print("Sorry, I didn't get that. Please re-enter your number")
   print("To access today's weather, press 1")
   ("To access the 1-day forcast, press 2", 'blue')
   ("To access the 2-day forcast, press 3", 'blue')
