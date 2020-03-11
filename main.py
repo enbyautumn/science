@@ -106,7 +106,7 @@ if path.exists("Z:\\weights.xml"):
 	net = NetworkReader.readFrom('Z:\\weights.xml')
 	print("Resumed Training")
 else:
-	net = buildNetwork(3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3)
+	net = buildNetwork(3, 4, 5, 6, 7, 8, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3)
 	print("New Brain Built")
 	
 trainer = BackpropTrainer(net, ds, verbose=True)
