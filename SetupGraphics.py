@@ -129,7 +129,7 @@ elif number == 8:
     num2 = int(num2)
       
   elif answer == 0:
-    num2 = input("enter the date:")
+    num2 = input("Enter the date:")
     num2 = int(num2)
     
   data = open("/Users/mac/data.json", "r").read()
