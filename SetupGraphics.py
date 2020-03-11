@@ -12,7 +12,7 @@ net = NetworkReader.readFrom('/Users/mac/weights.xml')
 data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
 
-print("Welcome to Dover Weather, one of, if not the best weather forecasting stations for Dover you can find")
+print("Welcome to Dover Weather, one of, if not the best weather forecasting stations for Dover, MA")
 
 text = colored("To access today's weather, press 1", 'blue')
 text2 = colored("To access the 1-day forcast, press 2", 'blue')
