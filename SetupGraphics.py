@@ -140,15 +140,17 @@ elif number == 8:
     
 else:
   print("Sorry, I didn't get that. Please re-enter your number")
-  print("To access today's weather, press 1")
-  ("To access the 1-day forcast, press 2", 'blue')
-  ("To access the 2-day forcast, press 3", 'blue')
-  ("To access the 3-day forecast, press 4", 'blue')
   
-  print("To access a temperature graph, press 5") 
-  print("To access a humidity graph, press 6")
-  print("To access a pressure graph, press 7")
-  print("To access previous weather data, press 8")
+  print(text)
+  print(text2)
+  print(text3)
+  print(text4)
+  
+  print(texta)
+  print(textb)
+  print(textc)
+  print(textd)
+  
   number = input ("Enter a number: ")
   number = int(number)
  
