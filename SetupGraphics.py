@@ -23,7 +23,7 @@ print(text2)
 print(text3)
 print(text4)
 
-print("For specific charts, see the below instructions.")
+print("For specific weather charts, see the below instructions.")
 
 texta = colored("To access a temperature graph, press 5", 'green')
 textb = colored("To access a humidity graph, press 6", 'green')
