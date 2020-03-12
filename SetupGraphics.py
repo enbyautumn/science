@@ -24,17 +24,6 @@ print(text2)
 print(text3)
 print(text4)
 
-print("For specific weather charts, see the below instructions.")
-
-texta = colored("To access a temperature graph, press 5", 'green')
-textb = colored("To access a humidity graph, press 6", 'green')
-textc = colored("To access a pressure graph, press 7", 'green')
-textd = colored("To access previous weather data, press 8", 'green')
-print(texta)
-print(textb)
-print(textc)
-print(textd)
-
 number = input ("Enter a number: ")
 number = int(number)
 
@@ -69,50 +58,8 @@ elif number == 3:
 elif number == 4:
   print("Please wait for our 3-day forcast to be complete")
   print(data(x, ["weather"]))
-  
-elif number == 5:
-  ax.scatter(data(x, ["main"]["temp"]))
-  
-  for x in range(0, 24):
-    ax.scatter(data(x+1, ["main"]["temp"]))
-                 
-  ax.set_xlabel('Days', fontsize=15)
-  ax.set_ylabel('Temperature', fontsize=15)
-  ax.set_title('Temperature Chart in Degrees Farenhite for the next 24 hours')
-
-  fig, ax = plt.subplots()
-  ax.grid(True)
-  plt.show()
-                              
-elif number == 6:
-  ax.scatter(data(x, ["main"]["humidity"]))
-  
-  for x in range(0, 24):
-    ax.scatter(data(x+1, ["main"]["humidity"]))
-                 
-  ax.set_xlabel('Days', fontsize=15)
-  ax.set_ylabel('Humidity', fontsize=15)
-  ax.set_title('Humidity Chart (in percentage) for the next 24 hours')
-
-  fig, ax = plt.subplots()
-  ax.grid(True)
-  plt.show()
-      
-elif number == 7:
-  ax.scatter(data(x, ["main"]["pressure"]))
-  
-  for x in range(0, 24):
-    ax.scatter(data(x+1, ["main"]["pressure"]))
-                 
-  ax.set_xlabel('Days', fontsize=15)
-  ax.set_ylabel('Pressure', fontsize=15)
-  ax.set_title('Atmospheric Pressure Chart (in hPa units) for the next 24 hours')
-
-  fig, ax = plt.subplots()
-  ax.grid(True)
-  plt.show()
     
-elif number == 8: 
+elif number == 5: 
     
   print("would you like instructions on how to enter the date? Yes = 1, No = 0")
   answer = input("1/0:")
@@ -145,11 +92,6 @@ else:
   print(text2)
   print(text3)
   print(text4)
-  
-  print(texta)
-  print(textb)
-  print(textc)
-  print(textd)
   
   number = input ("Enter a number: ")
   number = int(number)
