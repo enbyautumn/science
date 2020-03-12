@@ -15,16 +15,15 @@ data = json.loads(data)
 print("Welcome to Dover Weather, one of, if not the best weather forecasting stations for Dover, MA.")
 print("ZIP:02030")
 
-text = colored("To access today's weather, press 1", 'blue')
-text2 = colored("To access the 1-day forcast, press 2", 'blue')
-text3 = colored("To access the 2-day forcast, press 3", 'blue')
-text4 = colored("To access the 3-day forecast, press 4", 'blue')
-text5 = colroed("To access previous weather data, press 5", 'blue')
+text = colored("To access the 1-day forcast, press 1", 'blue')
+text2 = colored("To access the 2-day forcast, press 2", 'blue')
+text3 = colored("To access the 3-day forecast, press 3", 'blue')
+text4 = colroed("To access previous weather data, press 4", 'blue')
 print(text)
 print(text2)
 print(text3)
 print(text4)
-print(text5)
+
 
 number = input ("Enter a number: ")
 number = int(number)
@@ -33,35 +32,34 @@ number = int(number)
 # Marker size in units of points^2
 volume = (15 * data.volume[:-2] / data.volume[0])**2
 close = 0.003 * data.close[:-2] / 0.003 * data.open[:-2]
-
-if number == 1: 
   
-  def rounder(t):
-    if t.minute >= 30:
-        return t.replace(second=0, microsecond=0, minute=0, hour=t.hour+1)
-    else:
-        return t.replace(second=0, microsecond=0, minute=0)
+def rounder(t):
+  if t.minute >= 30:
+      return t.replace(second=0, microsecond=0, minute=0, hour=t.hour+1)
+  else:
+      return t.replace(second=0, microsecond=0, minute=0)
 
-  roundIt = rounder(now)
-  today = roundIt, "+0000 UTC"
-  date2 = ["dt_iso", today]
-  print(date2(["weather"]))
+roundIt = rounder(now)
+today = roundIt, "+0000 UTC"
+date2 = ["dt_iso", today]
+print(date2(["weather"]))
 
 x = date2
 
-elif number == 2:
+if number == 1:
+  x = date2
   print("Please wait for our 1-day forcast to be complete")
   print(data(x, ["weather"]))
   
-elif number == 3: 
+elif number == 2: 
   print("Please wait for our 2-day forcast to be complete")
   print(data(x, ["weather"]))
   
-elif number == 4:
+elif number == 3:
   print("Please wait for our 3-day forcast to be complete")
   print(data(x, ["weather"]))
     
-elif number == 5: 
+elif number == 4: 
   
  print("would you like instructions on how to enter the date? Yes = 1, No = 0")
  answer = input("1/0:")
@@ -95,7 +93,6 @@ else:
   print(text2)
   print(text3)
   print(text4)
-  print(text5)
   
   number = input ("Enter a number: ")
   number = int(number)
