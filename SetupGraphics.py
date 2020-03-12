@@ -62,29 +62,30 @@ elif number == 4:
   print(data(x, ["weather"]))
     
 elif number == 5: 
+  
+ print("would you like instructions on how to enter the date? Yes = 1, No = 0")
+ answer = input("1/0:")
+ answer = int(answer)
     
-  print("would you like instructions on how to enter the date? Yes = 1, No = 0")
-  answer = input("1/0:")
-  answer = int(answer)
+ if answer == 1:
+  
+   print("Enter the date you would like to view (You will only be able to access dates from 2014 onwards.)")
+   print("when you enter the date, you must enter it in the form of year-month-day.")
+   print("Include the hour in 24-hour time in the form of 00:00:00.")
+   print("Also, include '+0000 UTC' at the end.")
+   print("For example, if the date was Jan 2 of 2013, at 13:00, enter 2013-01-02 13:00:00 +0000 UTC")
     
-  if answer == 1:
-    print("Enter the date you would like to view (You will only be able to access dates from 2014 onwards.)")
-    print("when you enter the date, you must enter it in the form of year-month-day.")
-    print("Include the hour in 24-hour time in the form of 00:00:00.")
-    print("Also, include '+0000 UTC' at the end.")
-    print("For example, if the date was Jan 2 of 2013, at 13:00, enter 2013-01-02 13:00:00 +0000 UTC")
-    
-    num2 = input("enter the date:")
-    num2 = int(num2)
+   num2 = input("enter the date:")
+   num2 = int(num2)
       
-  elif answer == 0:
-    num2 = input("Enter the date:")
-    num2 = int(num2)
+ elif answer == 0:
+   num2 = input("Enter the date:")
+   num2 = int(num2)
     
-  data = open("/Users/mac/data.json", "r").read()
-  data = json.loads(data)
-  date = ["dt_iso", num2]
-  print(date(["weather"]))
+ data = open("/Users/mac/data.json", "r").read()
+ data = json.loads(data)
+ date = ["dt_iso", num2]
+ print(date(["weather"]))
     
     
 else:
