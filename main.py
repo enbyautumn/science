@@ -82,7 +82,7 @@ from pybrain.tools.shortcuts import buildNetwork
 from pybrain.datasets import SupervisedDataSet
 from pybrain.tools.xml.networkwriter import NetworkWriter
 from pybrain.tools.xml.networkreader import NetworkReader
-ds = SupervisedDataSet(3, 3)
+ds = SupervisedDataSet(6, 3)
 
 
 data = open("Z:\\sevendata.json", "r").read()
@@ -91,7 +91,7 @@ len = len(data)
 
 for x in range(len):
 	try:
-		ds.addSample((data[x]["main"]["temp"],data[x]["main"]["humidity"],data[x]["main"]["pressure"]),(data[x+24]["main"]["temp"],data[x+48]["main"]["temp"],data[x+72]["main"]["temp"]))
+		ds.addSample((data[x]["main"]["temp"],data[x]["main"]["humidity"],data[x]["main"]["pressure"],data[x-1]["main"]["temp"],data[x-1]["main"]["humidity"],data[x-1]["main"]["pressure"]),(data[x+24]["main"]["temp"],data[x+48]["main"]["temp"],data[x+72]["main"]["temp"]))
 	except:
 		print("nu")
 #print(data[x+1]["main"]["temp"])
@@ -106,7 +106,7 @@ if path.exists("Z:\\weights.xml"):
 	net = NetworkReader.readFrom('Z:\\weights.xml')
 	print("Resumed Training")
 else:
-	net = buildNetwork(3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3)
+	net = buildNetwork(6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3)
 	print("New Brain Built")
 	
 trainer = BackpropTrainer(net, ds, verbose=True)
