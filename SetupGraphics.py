@@ -13,7 +13,7 @@ data = open("/Users/mac/data.json", "r").read()
 data = json.loads(data)
 
 print("Welcome to Dover Weather, one of, if not the best weather forecasting stations for Dover, MA.")
-print("ZIP:02030")
+print("ZIP: 02030")
 
 text = colored("To access the 1-day forcast, press 1", 'blue')
 text2 = colored("To access the 2-day forcast, press 2", 'blue')
@@ -60,7 +60,7 @@ elif number == 3:
     
 elif number == 4: 
   
- print("would you like instructions on how to enter the date? Yes = 1, No = 0")
+ print("Would you like instructions on how to enter the date? Yes = 1, No = 0")
  answer = input("1/0:")
  answer = int(answer)
     
@@ -72,7 +72,7 @@ elif number == 4:
    print("Also, include '+0000 UTC' at the end.")
    print("For example, if the date was Jan 2 of 2013, at 13:00, enter 2013-01-02 13:00:00 +0000 UTC")
     
-   num2 = input("enter the date:")
+   num2 = input("Enter the date:")
    num2 = int(num2)
       
  elif answer == 0:
@@ -86,7 +86,7 @@ elif number == 4:
     
     
 else:
-  print("Sorry, I didn't get that. Please re-enter your number")
+  print("Sorry, I didn't get that. Please re-enter your number.")
   
   print(text)
   print(text2)
