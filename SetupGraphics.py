@@ -47,7 +47,6 @@ print(date2(["weather"]))
 x = date2
 
 if number == 1:
-  x = date2
   print("Please wait for our 1-day forcast to be complete")
   print(data(x, ["weather"]))
   
